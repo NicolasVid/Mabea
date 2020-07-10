@@ -1,0 +1,50 @@
+.Welcome {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.Welcome p {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    color: black; 
+    margin: 0 5px 24px;
+    float: left; 
+    padding: 10px; 
+    margin: 0 5px 24px; 
+    font-size:38px;
+}
+
+.Welcome a {
+    text-decoration: none;
+    color:black;
+}
+
+.Welcome a:hover {
+    text-decoration: none;
+    color:white;
+}
+
+.Welcome button {
+    color: #494949;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 2rem;
+}
+
+.Welcome button:hover {
+color: #ffffff;
+background: #679b9b;
+border-color: #679b9b;
+transition: all 0.4s ease 0s;
+}

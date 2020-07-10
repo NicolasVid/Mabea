@@ -1,0 +1,79 @@
+.BA {
+    margin-top: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.DisplayBa {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+.DisplayBa p {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    color: black; 
+    margin: 0 5px 0px;
+    float: left; 
+    padding: 10px; 
+    font-size:38px;
+}
+
+@media (max-width: 769px) {
+    .DisplayBa p {
+        font-size: 24px;
+    }
+    .BA {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.Anonyme {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        color: cadetblue ;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 500;
+}
+
+.Greet {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 500;
+}
+
+.Interaction {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.Interaction button {
+        color: #494949;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: #ffffff;
+        padding: 20px;
+        border: 4px solid #494949;
+        display: inline-block;
+        transition: all 0.4s ease 0s;
+        font-family: 'Libre Baskerville', serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 2rem;
+}
+
+.Interaction button:hover {
+    color: #ffffff;
+    background: #679b9b;
+    border-color: #679b9b;
+    transition: all 0.4s ease 0s;
+}
