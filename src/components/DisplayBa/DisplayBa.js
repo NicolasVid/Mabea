@@ -10,13 +10,10 @@ class displayBa extends React.Component {
 
     this.state = {
       posts: {},
-      display: true
     };
   }
-componentDidMount(){
-  this.changeBa();
-};
 
+  componentDidMount() {this.changeBa()};
   changeBa = () => {
     axios
       .get("http://localhost:4000/api/ba")
@@ -24,12 +21,10 @@ componentDidMount(){
         if (response.data.display) {
           this.setState({ posts: response.data });
           sessionStorage.setItem("_id", response.data._id);
-          sessionStorage.setItem("greeted", response.data.greets + 1);
-          console.log(response.data);
-          this.setState({display: true});
+          console.log(response.data)
         } else {
-          console.log(response);
-          this.changeBa();
+            console.log(response);
+            this.changeBa();
         }
       })
       .catch((error) => {
@@ -37,11 +32,6 @@ componentDidMount(){
       });
   };
 
-  greetingHandler = () => {
-    this.setState((prevState) => {
-      return { display: !prevState.display };
-    });
-  }
 
   render() {
     const { posts } = this.state;
@@ -54,17 +44,10 @@ componentDidMount(){
           <p>{posts.username}</p>
         </div>
         <div className="Greet">
-          {this.state.display?
-          posts.greets + " félicitations":
-          sessionStorage.getItem('greeted') + " félicitations"
-          }
-          </div>
+          {posts.greets} félicitations
+        </div>
         <div className="Interaction">
-          {this.props.isLoged ? 
-          <Greet 
-          display={this.state.display}
-          greetingHandler={this.greetingHandler}
-          /> : null}
+          {this.props.isLoged ? <Greet /> : null}
           <Link to="/Read">
             <button onClick={this.changeBa}>Nouvelle BA</button>
           </Link>

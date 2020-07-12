@@ -8,6 +8,7 @@ router.post('/', auth, baCtrl.createThing);
 
 router.get('/', baCtrl.getRandomBa);
 
-router.patch('/', baCtrl.greet);
+router.put('/', baCtrl.greet);
+
 
 module.exports = router;
