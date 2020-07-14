@@ -1,7 +1,6 @@
 import React from "react";
 import "./DisplayBa.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import Greet from "../Greet/Greet";
 
 class displayBa extends React.Component {
@@ -65,9 +64,7 @@ componentDidMount(){
           display={this.state.display}
           greetingHandler={this.greetingHandler}
           /> : null}
-          <Link to="/Read">
             <button onClick={this.changeBa}>Nouvelle BA</button>
-          </Link>
         </div>
       </div>
     );

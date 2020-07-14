@@ -71,8 +71,8 @@ class Login extends React.Component {
       );
     } else {
       return (
-        <div>
-          <h1>Bienvenue {this.props.username}</h1>
+        <div className="Loged">
+          <h1>Bienvenue, <br/><br/> {this.props.username}</h1>
           <Link to="/Read">
             <button>Lire des BA</button>
           </Link>

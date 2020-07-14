@@ -40,8 +40,8 @@ class Login extends Component {
   render() {
     if (this.state.status === 201) {
       return (
-        <div>
-          Compte crée avec succés
+        <div className="Signed">
+          <h1>Compte crée avec succés</h1>
           <Link to="/LogIn">
             <button>Se connecter</button>
           </Link>
