@@ -3,7 +3,12 @@ import axios from "axios";
 
 class Greet extends React.Component {
   clickHandler = () => {
-    axios
+    const Authaxios = axios.create({
+      headers: {
+        Authorization: "Bearer " + sessionStorage.getItem('token'),
+      }
+    });
+    Authaxios
       .patch("http://localhost:4000/api/ba/", {
         _id: sessionStorage.getItem("_id"),
         greeted: sessionStorage.getItem("greeted"),

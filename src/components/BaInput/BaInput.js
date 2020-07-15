@@ -31,7 +31,7 @@ class baInput extends React.Component {
     event.preventDefault();
     const Authaxios = axios.create({
       headers: {
-        Authorization: "Bearer " + this.props.token,
+        Authorization: "Bearer " + sessionStorage.getItem('token'),
       }
     });
     Authaxios
