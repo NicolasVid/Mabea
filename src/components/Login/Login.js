@@ -35,7 +35,6 @@ class Login extends React.Component {
           this.props.isLogedHandler();
           sessionStorage.setItem("username", response.data.username);
           sessionStorage.setItem("token", response.data.token);
-          console.log(response);
       })
       .catch((error) => {
         console.log(error);

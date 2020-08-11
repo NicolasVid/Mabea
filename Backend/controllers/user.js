@@ -23,6 +23,7 @@ exports.signup = (req, res, next) => {
           res.status(500).json({
             error: error,
           });
+
         });
     });
   });

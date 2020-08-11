@@ -20,17 +20,10 @@ componentDidMount(){
     axios
       .get("http://localhost:4000/api/ba")
       .then((response) => {
-        if (response.data.display) {
           this.setState({ posts: response.data });
           sessionStorage.setItem("_id", response.data._id);
           sessionStorage.setItem("greeted", response.data.greets + 1);
-          console.log(response.data);
-          this.setState({display: true});
-        } else {
-          console.log(response);
-          this.changeBa();
-        }
-      })
+        })
       .catch((error) => {
         console.log(error);
       });

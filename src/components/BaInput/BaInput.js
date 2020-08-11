@@ -35,7 +35,7 @@ class baInput extends React.Component {
       }
     });
     Authaxios
-      .post("http://localhost:4000/api/ba", this.state)
+      .post("http://localhost:4000/api/moderation", this.state)
       .then((response) => {
         this.setState({ status: response.status });
         console.log(response);

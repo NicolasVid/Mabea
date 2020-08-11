@@ -3,7 +3,6 @@ import Toolbar from "./components/Toolbar/Toolbar";
 import SideDrawer from "./components/SideDrawer/SlideDrawer";
 import Backdrop from "./components/Backdrop/Backdrop";
 import DisplayBa from "./components/DisplayBa/DisplayBa";
-import Footer from "./components/Footer/Footer";
 import BaInput from "./components/BaInput/BaInput";
 import Welcome from "./components/Welcome/Welcome";
 import SignUp from "./components/Signup/Signup";
@@ -18,7 +17,6 @@ class App extends React.Component {
       sideDrawerOpen: false,
       isLoged: false,
       username: sessionStorage.getItem("username"),
-      token: sessionStorage.getItem("token"),
     };
   }
 
@@ -87,7 +85,6 @@ class App extends React.Component {
               component={() => (
                 <BaInput
                   username={this.state.username}
-                  token={this.state.token}
                   Authaxios={this.props.Authaxios}
                 />
               )}
@@ -106,7 +103,6 @@ class App extends React.Component {
             />
             <Route path="/SignUp" component={SignUp} />
           </main>
-          <Footer />
         </div>
       </Router>
     );
