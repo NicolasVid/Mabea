@@ -40,16 +40,16 @@ componentDidMount(){
     return (
       <div className="BA">
         <div className="DisplayBa">
-          <p>{posts.ba}</p>
+          {/* <p>{posts.ba}</p> */}
         </div>
         <div className="Anonyme">
-          <p>{posts.username}</p>
+          {/* <p>{posts.username}</p> */}
         </div>
         <div className="Greet">
-          {this.state.display?
+          {/* {this.state.display?
           posts.greets + " félicitations":
           sessionStorage.getItem('greeted') + " félicitations"
-          }
+          } */}
           </div>
         <div className="Interaction">
           {this.props.isLoged ? 

@@ -33,6 +33,9 @@ const toolbar = (props) => {
                 <li>Publier une BA</li>
               </Link>
             ) : null}
+            <Link to="/Moderation">
+              <li>Modérer</li>
+            </Link>
             {props.isLoged ? (
                 <Link to={route} onClick={props.isLogedHandler}>
                 <li>{log}</li>

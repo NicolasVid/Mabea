@@ -27,6 +27,9 @@ const sideDrawer = (props) => {
             <Link to="/Publish">Publier une BA</Link>
           </li>
         ) : null}
+            <Link to="/Moderation">
+              <li>Modérer</li>
+            </Link>
         <li onClick={props.backdropClickHandler}>
           {props.isLoged ? (
             <Link to={route} onClick={props.isLogedHandler}>

@@ -1,0 +1,71 @@
+.BA2 {
+    margin-top: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.DisplayBa2 {
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+.DisplayBa2 p {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    color: black; 
+    margin: 0 5px 0px;
+    float: left; 
+    padding: 10px; 
+    font-size:38px;
+}
+
+@media (max-width: 769px) {
+    .DisplayBa2 p {
+        font-size: 24px;
+    }
+    .BA2 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.Anonyme2 {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        color: cadetblue ;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 500;
+}
+
+.Moderation {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.Moderation button {
+    color: #494949;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 2rem;
+}
+
+.Moderation button:hover {
+color: #ffffff;
+background: #679b9b;
+border-color: #679b9b;
+transition: all 0.4s ease 0s;
+}

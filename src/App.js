@@ -7,6 +7,7 @@ import BaInput from "./components/BaInput/BaInput";
 import Welcome from "./components/Welcome/Welcome";
 import SignUp from "./components/Signup/Signup";
 import LogIn from "./components/Login/Login";
+import Moderation from "./components/Moderation/Moderation";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends React.Component {
@@ -102,6 +103,14 @@ class App extends React.Component {
               )}
             />
             <Route path="/SignUp" component={SignUp} />
+            <Route
+              path="/Moderation"
+              component={() => (
+                <Moderation
+                  
+                />
+              )}
+            />
           </main>
         </div>
       </Router>
