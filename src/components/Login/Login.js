@@ -31,10 +31,13 @@ class Login extends React.Component {
       .post("http://localhost:4000/api/auth/login", this.state)
       .then((response) => {
           this.props.getUsername(response.data.username);
+          console.log(response.data);
           this.props.getToken(response.data.token);
+          this.props.getAdmin(response.data.admin);
           this.props.isLogedHandler();
           sessionStorage.setItem("username", response.data.username);
           sessionStorage.setItem("token", response.data.token);
+          sessionStorage.setItem("admin", response.data.admin);
       })
       .catch((error) => {
         console.log(error);

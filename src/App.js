@@ -18,6 +18,8 @@ class App extends React.Component {
       sideDrawerOpen: false,
       isLoged: false,
       username: sessionStorage.getItem("username"),
+      admin: sessionStorage.getItem("admin"),
+      token: sessionStorage.getItem("token")
     };
   }
 
@@ -30,6 +32,11 @@ class App extends React.Component {
   getToken = (props) => {
     this.setState({ token: props });
     sessionStorage.setItem("token", this.state.token);
+  };
+
+  getAdmin = (props) => {
+    this.setState({ admin: props });
+    sessionStorage.setItem("admin", this.state.admin);
   };
 
   getUsername = (props) => {
@@ -67,19 +74,25 @@ class App extends React.Component {
             drawerClickHandler={this.drawnerToogleClickHandler}
             isLoged={this.state.isLoged}
             isLogedHandler={this.isLogedHandler}
+            admin={this.state.admin}
           />
           <SideDrawer
             show={this.state.sideDrawerOpen}
             backdropClickHandler={this.backdropClickHandler}
             isLoged={this.state.isLoged}
             isLogedHandler={this.isLogedHandler}
+            admin={this.state.admin}
           />
           {backdrop}
           <main style={{ marginTop: "64px" }}>
             <Route path="/" exact component={Welcome} />
             <Route
               path="/Read"
-              component={() => <DisplayBa isLoged={this.state.isLoged} />}
+              component={() =>  (
+                <DisplayBa 
+                  isLoged={this.state.isLoged} 
+                />
+              )}
             />
             <Route
               path="/Publish"
@@ -99,6 +112,7 @@ class App extends React.Component {
                   getUsername={this.getUsername}
                   username={this.state.username}
                   getToken={this.getToken}
+                  getAdmin={this.getAdmin}
                 />
               )}
             />

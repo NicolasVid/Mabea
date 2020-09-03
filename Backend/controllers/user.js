@@ -11,6 +11,7 @@ exports.signup = (req, res, next) => {
         username: "Anonyme #" + count++,
         email: req.body.email,
         password: hash,
+        admin: false
       });
       user
         .save()
@@ -53,7 +54,8 @@ exports.login = (req, res, next) => {
           res.status(200).json({
             userId: user._id,
             token: token,
-            username: user.username
+            username: user.username,
+            admin: user.admin
           });
         })
         .catch((error) => {

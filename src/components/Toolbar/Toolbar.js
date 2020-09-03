@@ -9,6 +9,7 @@ const toolbar = (props) => {
   if (props.isLoged) {
     log = "Deconnexion";
     route = "/";
+    console.log(props.admin);
   }
 
   return (
@@ -33,9 +34,11 @@ const toolbar = (props) => {
                 <li>Publier une BA</li>
               </Link>
             ) : null}
+            {props.admin&&props.isLoged ? (
             <Link to="/Moderation">
               <li>Modérer</li>
             </Link>
+            ) : null}
             {props.isLoged ? (
                 <Link to={route} onClick={props.isLogedHandler}>
                 <li>{log}</li>
