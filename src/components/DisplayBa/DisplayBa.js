@@ -20,7 +20,7 @@ class displayBa extends React.Component {
 
   changeBa = () => {
     axios
-      .get("http://localhost:4000/api/ba")
+      .get("http://localhost:5000/api/ba")
       .then((response) => {
           this.setState({ posts: response.data });
           sessionStorage.setItem("_id", response.data._id);
@@ -36,6 +36,25 @@ class displayBa extends React.Component {
       return { display: !prevState.display };
     });
   }
+
+  clickHandler = () => {
+    const Authaxios = axios.create({
+      headers: {
+        Authorization: "Bearer " + sessionStorage.getItem('token'),
+      }
+    });
+
+    Authaxios
+      .patch("http://localhost:5000/api/ba/", {
+        _id: sessionStorage.getItem("_id"),
+        greeted: sessionStorage.getItem("greeted"),
+      })
+      .then((response) => {
+        this.greetingHandler();
+      }).catch((error) => {
+        console.log(error);
+      });
+  };
 
   render() {
     const { posts } = this.state;
@@ -58,6 +77,7 @@ class displayBa extends React.Component {
           <Greet 
           display={this.state.display}
           greetingHandler={this.greetingHandler}
+          clickHandler={this.clickHandler}
           /> : null}
             <button onClick={this.changeBa}>Nouvelle BA</button>
         </div>

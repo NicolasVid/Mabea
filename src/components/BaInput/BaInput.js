@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 class baInput extends React.Component {
   constructor(props) {
-    super(props);
-
+  super(props);
+  
     this.state = {
       username: this.props.username,
       ba: "",
@@ -16,7 +16,7 @@ class baInput extends React.Component {
 
   resetStatus = () => {
     this.setState({
-      status: "",
+    status: "",
       ba: "",
     });
   };
@@ -35,7 +35,7 @@ class baInput extends React.Component {
       }
     });
     Authaxios
-      .post("http://localhost:4000/api/moderation", this.state)
+      .post("http://localhost:5000/api/moderation", this.state)
       .then((response) => {
         this.setState({ status: response.status });
         console.log(response);

@@ -18,11 +18,15 @@ class Moderation extends React.Component {
     componentDidMount (){
         this.changeModeration();
     }
-    
 
     changeModeration = () => {
-        axios
-          .get("http://localhost:4000/api/moderation")
+      const Authaxios = axios.create({
+        headers: {
+          Authorization: "Bearer " + sessionStorage.getItem('token'),
+        }
+      });
+        Authaxios
+          .get("http://localhost:5000/api/moderation")
           .then((response) => {
             if (response.data == null) {
               this.setState({end: true});
@@ -35,12 +39,17 @@ class Moderation extends React.Component {
       };
 
       ValidationHandler = () => {
-        axios
-          .post("http://localhost:4000/api/ba", this.state)
+        const Authaxios = axios.create({
+          headers: {
+            Authorization: "Bearer " + sessionStorage.getItem('token'),
+          }
+        });
+          Authaxios
+          .post("http://localhost:5000/api/ba", this.state)
           .then(() => {
             console.log(this.state.ba);
             axios
-              .patch("http://localhost:4000/api/moderation", this.state)
+              .patch("http://localhost:5000/api/moderation", this.state)
               .then(() => {
                 this.changeModeration();
               }).catch((error) => {
@@ -52,8 +61,13 @@ class Moderation extends React.Component {
       };
 
       DeleteHandler = () => {
-        axios
-              .patch("http://localhost:4000/api/moderation/", this.state)
+        const Authaxios = axios.create({
+          headers: {
+            Authorization: "Bearer " + sessionStorage.getItem('token'),
+          }
+        });
+          Authaxios
+              .patch("http://localhost:5000/api/moderation", this.state)
               .then(()=> {
                 this.changeModeration();
               }).catch((error) => {

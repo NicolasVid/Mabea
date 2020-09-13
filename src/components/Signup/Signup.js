@@ -28,7 +28,7 @@ class Login extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:4000/api/auth/signup", this.state)
+      .post("http://localhost:5000/api/auth/signup", this.state)
       .then((response) => {
         this.setState({ status: response.status });
         console.log(response);

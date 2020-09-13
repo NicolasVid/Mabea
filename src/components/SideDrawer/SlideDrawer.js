@@ -22,14 +22,18 @@ const sideDrawer = (props) => {
         <li onClick={props.backdropClickHandler}>
           {props.isLoged ? <Link to="/Read">Lire des BA</Link> : null}
         </li>
+
         {props.isLoged ? (
           <li onClick={props.backdropClickHandler}>
             <Link to="/Publish">Publier une BA</Link>
           </li>
         ) : null}
-            <Link to="/Moderation">
-              <li>Modérer</li>
-            </Link>
+
+          <li onClick={props.backdropClickHandler}>
+            {props.admin&&props.isLoged ? (
+            <Link to="/Moderation">Modérer</Link>) : null}
+          </li>
+
         <li onClick={props.backdropClickHandler}>
           {props.isLoged ? (
             <Link to={route} onClick={props.isLogedHandler}>
@@ -38,6 +42,7 @@ const sideDrawer = (props) => {
           ) : (
             <Link to={route}>{log}</Link>
           )}
+
         </li>
       </ul>
     </nav>

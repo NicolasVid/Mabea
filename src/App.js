@@ -99,7 +99,6 @@ class App extends React.Component {
               component={() => (
                 <BaInput
                   username={this.state.username}
-                  Authaxios={this.props.Authaxios}
                 />
               )}
             />
