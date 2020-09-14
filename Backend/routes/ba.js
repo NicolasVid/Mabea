@@ -5,7 +5,7 @@ const baCtrl = require('../controllers/ba');
 const auth = require('../middleware/auth');
 
 router.get('/', baCtrl.getRandomBa);
-router.post('/', baCtrl.createBa);
+router.post('/', auth, baCtrl.createBa);
 router.patch('/', auth, baCtrl.greet);
 
 module.exports = router;

@@ -49,14 +49,16 @@ class baInput extends React.Component {
     const { ba } = this.state;
     if (this.state.status === 201) {
       return (
-        <div>
-          Merci pour ton partage !
+        <div className="Share">
+          <h1>Merci pour ton partage !</h1>
+          <div className="Share__button">
           <Link to="/Publish">
             <button onClick={this.resetStatus}>Publier une autre BA</button>
           </Link>
           <Link to="/Read">
             <button>Lire des BA</button>
           </Link>
+          </div>
         </div>
       );
     } else {

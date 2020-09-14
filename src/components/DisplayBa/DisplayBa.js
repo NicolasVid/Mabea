@@ -25,17 +25,12 @@ class displayBa extends React.Component {
           this.setState({ posts: response.data });
           sessionStorage.setItem("_id", response.data._id);
           sessionStorage.setItem("greeted", response.data.greets + 1);
+          this.setState({display: true});
         })
       .catch((error) => {
         console.log(error);
       });
   };
-
-  greetingHandler = () => {
-    this.setState((prevState) => {
-      return { display: !prevState.display };
-    });
-  }
 
   clickHandler = () => {
     const Authaxios = axios.create({
@@ -50,7 +45,7 @@ class displayBa extends React.Component {
         greeted: sessionStorage.getItem("greeted"),
       })
       .then((response) => {
-        this.greetingHandler();
+        this.setState({display: false});
       }).catch((error) => {
         console.log(error);
       });

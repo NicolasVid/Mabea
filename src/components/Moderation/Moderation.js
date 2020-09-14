@@ -39,6 +39,7 @@ class Moderation extends React.Component {
       };
 
       ValidationHandler = () => {
+        console.log(this.state);
         const Authaxios = axios.create({
           headers: {
             Authorization: "Bearer " + sessionStorage.getItem('token'),
@@ -47,8 +48,7 @@ class Moderation extends React.Component {
           Authaxios
           .post("http://localhost:5000/api/ba", this.state)
           .then(() => {
-            console.log(this.state.ba);
-            axios
+            Authaxios
               .patch("http://localhost:5000/api/moderation", this.state)
               .then(() => {
                 this.changeModeration();

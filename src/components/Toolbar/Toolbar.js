@@ -9,7 +9,6 @@ const toolbar = (props) => {
   if (props.isLoged) {
     log = "Deconnexion";
     route = "/";
-    console.log(props.admin);
   }
 
   return (

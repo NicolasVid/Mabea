@@ -39,7 +39,6 @@ exports.deleteModeration = (req, res , next) => {
   var _id = req.body._id;
   Moderation.findOneAndDelete({_id: _id}).then(
     () => {
-      console.log(_id);
       res.status(200).json({
         message: 'Deleted!'
       });
