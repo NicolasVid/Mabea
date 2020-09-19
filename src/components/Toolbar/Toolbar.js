@@ -8,7 +8,7 @@ const toolbar = (props) => {
   let route = "/LogIn";
   if (props.isLoged) {
     log = "Deconnexion";
-    route = "/";
+    route = process.env.PUBLIC_URL+'/';
   }
 
   return (
