@@ -13,7 +13,7 @@ const sideDrawer = (props) => {
   let route = "/LogIn";
   if (props.isLoged) {
     log = "Deconnexion";
-    route = "/";
+    route = "/Mabea";
   }
 
   return (
