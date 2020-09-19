@@ -18,7 +18,7 @@ const toolbar = (props) => {
           <DrawerToogleButton click={props.drawerClickHandler} />
         </div>
         <div className="toolbar_logo">
-          <Link to="/Mabea">MABÉA</Link>
+          <Link to={process.env.PUBLIC_URL+'/'}>MABÉA</Link>
         </div>
         <div className="spacer"></div>
         <div className="toolbar_navigation-items">

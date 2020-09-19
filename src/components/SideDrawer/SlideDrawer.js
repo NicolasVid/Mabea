@@ -13,7 +13,7 @@ const sideDrawer = (props) => {
   let route = "/LogIn";
   if (props.isLoged) {
     log = "Deconnexion";
-    route = "/Mabea";
+    route = process.env.PUBLIC_URL+'/';
   }
 
   return (
