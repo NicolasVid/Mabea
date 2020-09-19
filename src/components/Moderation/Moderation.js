@@ -39,7 +39,6 @@ class Moderation extends React.Component {
       };
 
       ValidationHandler = () => {
-        console.log(this.state);
         const Authaxios = axios.create({
           headers: {
             Authorization: "Bearer " + sessionStorage.getItem('token'),

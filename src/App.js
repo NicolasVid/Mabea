@@ -85,7 +85,7 @@ class App extends React.Component {
           />
           {backdrop}
           <main style={{ marginTop: "64px" }}>
-            <Route path="/Mabea" exact component={Welcome} />
+            <Route path="/" exact component={Welcome} />
             <Route
               path="/Read"
               component={() =>  (

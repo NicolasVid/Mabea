@@ -32,7 +32,6 @@ class Login extends React.Component {
       .post("https://damp-thicket-56527.herokuapp.com/api/auth/login", this.state)
       .then((response) => {
           this.props.getUsername(response.data.username);
-          console.log(response.data);
           this.props.getToken(response.data.token);
           this.props.getAdmin(response.data.admin);
           this.props.isLogedHandler();

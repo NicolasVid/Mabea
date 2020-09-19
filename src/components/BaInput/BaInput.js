@@ -38,7 +38,6 @@ class baInput extends React.Component {
       .post("https://damp-thicket-56527.herokuapp.com/api/moderation", this.state)
       .then((response) => {
         this.setState({ status: response.status });
-        console.log(response);
       })
       .catch((error) => {
         console.log(error);
