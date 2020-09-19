@@ -29,7 +29,7 @@ class Login extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:5000/api/auth/login", this.state)
+      .post("https://damp-thicket-56527.herokuapp.com/api/auth/login", this.state)
       .then((response) => {
           this.props.getUsername(response.data.username);
           console.log(response.data);

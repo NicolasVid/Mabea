@@ -29,7 +29,7 @@ class Login extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:5000/api/auth/signup", this.state)
+      .post("https://damp-thicket-56527.herokuapp.com/api/auth/signup", this.state)
       .then((response) => {
         this.setState({ status: response.status });
         console.log(response);

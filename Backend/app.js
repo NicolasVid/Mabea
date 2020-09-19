@@ -8,7 +8,7 @@ const moderationRoutes = require('./routes/moderation');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://'+process.env.MONGODB_ID+':'+process.env.MONGODB_PASSWORD+'@cluster0-6xnir.mongodb.net/Cluster0?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Successfully connected to MongoDB Atlas!');
   })

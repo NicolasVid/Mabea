@@ -26,7 +26,7 @@ class Moderation extends React.Component {
         }
       });
         Authaxios
-          .get("http://localhost:5000/api/moderation")
+          .get("https://damp-thicket-56527.herokuapp.com/api/moderation")
           .then((response) => {
             if (response.data == null) {
               this.setState({end: true});
@@ -46,10 +46,10 @@ class Moderation extends React.Component {
           }
         });
           Authaxios
-          .post("http://localhost:5000/api/ba", this.state)
+          .post("https://damp-thicket-56527.herokuapp.com/api/ba", this.state)
           .then(() => {
             Authaxios
-              .patch("http://localhost:5000/api/moderation", this.state)
+              .patch("https://damp-thicket-56527.herokuapp.com/api/moderation", this.state)
               .then(() => {
                 this.changeModeration();
               }).catch((error) => {
@@ -67,7 +67,7 @@ class Moderation extends React.Component {
           }
         });
           Authaxios
-              .patch("http://localhost:5000/api/moderation", this.state)
+              .patch("https://damp-thicket-56527.herokuapp.com/api/moderation", this.state)
               .then(()=> {
                 this.changeModeration();
               }).catch((error) => {

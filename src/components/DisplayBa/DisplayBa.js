@@ -40,7 +40,7 @@ class displayBa extends React.Component {
     });
 
     Authaxios
-      .patch("http://localhost:5000/api/ba/", {
+      .patch("https://damp-thicket-56527.herokuapp.com/api/ba/", {
         _id: sessionStorage.getItem("_id"),
         greeted: sessionStorage.getItem("greeted"),
       })
