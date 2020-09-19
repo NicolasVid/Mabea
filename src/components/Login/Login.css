@@ -150,3 +150,9 @@ background: #679b9b;
 border-color: #679b9b;
 transition: all 0.4s ease 0s;
 }
+
+.error-message {
+    font-size: 15px;
+    font-family: 'Libre Baskerville', serif;
+    color: rgb(179, 11, 11);
+}

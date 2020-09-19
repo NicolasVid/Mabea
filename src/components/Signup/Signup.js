@@ -10,6 +10,7 @@ class Login extends Component {
     this.state = {
       email: "",
       password: "",
+      message: "",
     };
   }
 
@@ -34,7 +35,8 @@ class Login extends Component {
         console.log(response);
       })
       .catch((error) => {
-        console.log(error.message);
+        console.log(error);
+        this.setState({message: "Email déjà utilisé"})
       });
   };
   render() {
@@ -63,6 +65,7 @@ class Login extends Component {
                 placeholder="Password"
                 onChange={this.handlePasswordChange}
               />
+              <div className="error-message">{this.state.message}</div>
               <button className="btn" type="submit">
                 S'inscrire
               </button>

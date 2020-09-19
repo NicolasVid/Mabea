@@ -10,6 +10,7 @@ class Login extends React.Component {
     this.state = {
       email: "",
       password: "",
+      message: "",
     };
   }
 
@@ -40,7 +41,9 @@ class Login extends React.Component {
           sessionStorage.setItem("admin", response.data.admin);
       })
       .catch((error) => {
+        this.setState({message: "Email ou mot de passe incorrect"})
         console.log(error);
+        
       });
   };
 
@@ -61,6 +64,7 @@ class Login extends React.Component {
                 placeholder="Password"
                 onChange={this.handlePasswordChange}
               />
+              <div className="error-message">{this.state.message}</div>
               <button className="btn" type="submit">
                 Se connecter
               </button>

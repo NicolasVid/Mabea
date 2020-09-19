@@ -20,7 +20,7 @@ class displayBa extends React.Component {
 
   changeBa = () => {
     axios
-      .get("http://localhost:5000/api/ba")
+      .get("https://damp-thicket-56527.herokuapp.com/api/ba")
       .then((response) => {
           this.setState({ posts: response.data });
           sessionStorage.setItem("_id", response.data._id);
