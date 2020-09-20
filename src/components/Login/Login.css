@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
 }
 
 .login-box h1 {
@@ -13,11 +14,12 @@
     justify-content: center;
     font-family: 'Libre Baskerville', serif;
     font-size: 24px;
-    width: 450px;
+    width: 100%;
     background-color: #679b9b;
     color: white;
     border:1px solid black;
     width: 80%;
+    height: 40px;
 }
 
 .login-box a {
@@ -41,19 +43,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
     font-family: 'Libre Baskerville', serif;
     font-size: 24px;
+    width: 80%;
 }
 
 .login-box form input {
     height: 40px;
     border: 2px solid grey;
-    box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    margin-bottom: 10px;
-    width: 147%;
+    width: 100%;
+    margin: 1rem 0 0 0;
+
+
 }
 
 .login-box form .btn {

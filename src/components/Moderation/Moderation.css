@@ -1,3 +1,12 @@
+.end-ba {
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    color: black; 
+    font-size:38px;
+}
+
 .BA2 {
     margin-top: 150px;
     height: 100%;
@@ -25,6 +34,10 @@
 
 @media (max-width: 769px) {
     .DisplayBa2 p {
+        font-size: 24px;
+    }
+
+    .end-ba {
         font-size: 24px;
     }
     .BA2 {

@@ -62,7 +62,7 @@ class baInput extends React.Component {
       );
     } else {
       return (
-        <div className="Input">
+        <div className="Input2">
           <form onSubmit={this.handleSumbit}>
             <h1>PARTAGER VOTRE BA !</h1>
             <textarea

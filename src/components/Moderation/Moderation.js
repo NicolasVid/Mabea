@@ -78,7 +78,7 @@ class Moderation extends React.Component {
         const { posts } = this.state;
         if (this.state.end) {
           return(
-          <div className="DisplayBa2"><p>Plus de BA à moderer</p></div>
+          <div className="end-ba"><p>Plus de BA à moderer</p></div>
           )
         } else {
         return (
