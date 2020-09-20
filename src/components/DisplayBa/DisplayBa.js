@@ -2,6 +2,7 @@ import React from "react";
 import "./DisplayBa.css";
 import axios from "axios";
 import Greet from "../Greet/Greet";
+import Loader from '../Loader/Loader';
 
 class displayBa extends React.Component {
 
@@ -11,6 +12,7 @@ class displayBa extends React.Component {
     this.state = {
       posts: {},
       display: true,
+      loading: true,
     };
   }
 
@@ -29,7 +31,10 @@ class displayBa extends React.Component {
         })
       .catch((error) => {
         console.log(error);
-      });
+      })
+      .then(()=>{
+        this.setState({loading: false});
+      })
   };
 
   clickHandler = () => {
@@ -53,8 +58,11 @@ class displayBa extends React.Component {
 
   render() {
     const { posts } = this.state;
+    if (this.state.loading) 
+      return <Loader />
+    else
     return (
-      <div className="BA">
+      <>
         <div className="DisplayBa">
           <p>{posts.ba}</p>
         </div>
@@ -66,7 +74,7 @@ class displayBa extends React.Component {
           posts.greets + " félicitations":
           sessionStorage.getItem('greeted') + " félicitations"
           }
-          </div>
+        </div>
         <div className="Interaction">
           {this.props.isLoged ? 
           <Greet 
@@ -76,7 +84,7 @@ class displayBa extends React.Component {
           /> : null}
             <button onClick={this.changeBa}>Nouvelle BA</button>
         </div>
-      </div>
+      </>
     );
   }
 }

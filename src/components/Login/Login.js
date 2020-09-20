@@ -51,7 +51,6 @@ class Login extends React.Component {
       return (
         <div className="login-box">
           <h1>Connexion</h1>
-          <div>
             <form className="login-form" onSubmit={this.handleSubmit}>
               <input
                 type="email"
@@ -69,9 +68,8 @@ class Login extends React.Component {
               </button>
             </form>
             <Link to="/signup">
-              <h3>Créer un compte</h3>
+              Créer un compte
             </Link>
-          </div>
         </div>
       );
     } else {

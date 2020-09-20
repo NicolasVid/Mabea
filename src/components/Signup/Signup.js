@@ -53,7 +53,6 @@ class Login extends Component {
       return (
         <div className="login-box">
           <h1>Créer un compte</h1>
-          <div>
             <form className="login-form" onSubmit={this.handleSubmit}>
               <input
                 type="email"
@@ -70,7 +69,6 @@ class Login extends Component {
                 S'inscrire
               </button>
             </form>
-          </div>
         </div>
       );
     }

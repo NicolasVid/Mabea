@@ -84,7 +84,7 @@ class App extends React.Component {
             admin={this.state.admin}
           />
           {backdrop}
-          <main style={{ marginTop: "64px" }}>
+          <main>
             <Route path={process.env.PUBLIC_URL+'/'} exact component={Welcome} />
             <Route
               path="/Read"

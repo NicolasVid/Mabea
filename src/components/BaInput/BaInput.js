@@ -67,7 +67,7 @@ class baInput extends React.Component {
             <h1>PARTAGER VOTRE BA !</h1>
             <textarea
               type="text"
-              placeholder="Votre BA"
+              placeholder="Ta bonne action..."
               value={ba}
               onChange={this.handleBaChange}
             />

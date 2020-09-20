@@ -17,20 +17,18 @@
     background-color: #679b9b;
     color: white;
     border:1px solid black;
+    width: 80%;
 }
 
-.login-box h3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.login-box a {
+    text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-size: 24px;
-    width: 225px;
-    margin-left: 112.5px;
     background-color: white;
     color: #679b9b;
     border:1px solid #679b9b;
+    padding: 0 2rem;
+    margin-top: 40px;
 }
 
 .login-box a {
@@ -48,36 +46,17 @@
     font-size: 24px;
 }
 
-.login-box input {
-    width: 450px;
+.login-box form input {
     height: 40px;
     border: 2px solid grey;
     box-sizing: border-box;
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     margin-bottom: 10px;
+    width: 147%;
 }
 
-.login-box input[type="text"]:focus {
-    box-shadow: 0 0 5px #679b9b;
-    padding: 0.5%;
-	border: 2px solid #679b9b;
-}
-
-.login-box textarea {
-    margin-top: 40px;
-    width: 440px;
-    height: 100px;
-    border: 2px solid grey;
-}
-
-.login-box textarea[type="text"]:focus {
-    box-shadow: 0 0 5px #679b9b;
-    padding: 0.5%;
-    border: 2px solid #679b9b;
-}
-
-.login-box .btn {
+.login-box form .btn {
     color: #494949;
     text-transform: uppercase;
     text-decoration: none;
@@ -89,10 +68,10 @@
     font-family: 'Libre Baskerville', serif;
     font-size: 20px;
     font-weight: 700;
-    margin: 1rem;
+    margin-top: 2rem;
 }
 
-.login-box .btn:hover {
+.login-box form .btn:hover {
 color: #ffffff;
 background: #679b9b;
 border-color: #679b9b;
@@ -105,6 +84,7 @@ transition: all 0.4s ease 0s;
     justify-content: center;
     align-items: center;
     height: 400px;
+    margin-top: 80px;
 }
 
 .Loged h1 {

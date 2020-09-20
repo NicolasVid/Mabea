@@ -1,16 +1,9 @@
-.BA {
-    margin-top: 150px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 120px;
-    margin-right: 120px;
-}
 
 .DisplayBa {
     display: flex;
     justify-content: center;
     text-align: justify;
+    margin-top: 150px;
 }
 
 .DisplayBa p {
@@ -30,6 +23,11 @@
     .BA {
         margin-left: 20px;
         margin-right: 20px;
+    }
+    .Interaction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -53,7 +51,7 @@
 .Interaction {
     display: flex;
     justify-content: center;
-    margin-top: 5px;
+    margin: 0 auto;
 }
 
 .Interaction button {
