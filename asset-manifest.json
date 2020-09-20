@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Mabea/static/css/main.23640218.chunk.css",
+    "main.js": "/Mabea/static/js/main.865d6e75.chunk.js",
+    "main.js.map": "/Mabea/static/js/main.865d6e75.chunk.js.map",
+    "runtime-main.js": "/Mabea/static/js/runtime-main.148087ca.js",
+    "runtime-main.js.map": "/Mabea/static/js/runtime-main.148087ca.js.map",
+    "static/js/2.0d70690d.chunk.js": "/Mabea/static/js/2.0d70690d.chunk.js",
+    "static/js/2.0d70690d.chunk.js.map": "/Mabea/static/js/2.0d70690d.chunk.js.map",
+    "index.html": "/Mabea/index.html",
+    "precache-manifest.3f3b7551f11f9f2a69de47a56aa24ecf.js": "/Mabea/precache-manifest.3f3b7551f11f9f2a69de47a56aa24ecf.js",
+    "service-worker.js": "/Mabea/service-worker.js",
+    "static/css/main.23640218.chunk.css.map": "/Mabea/static/css/main.23640218.chunk.css.map",
+    "static/js/2.0d70690d.chunk.js.LICENSE.txt": "/Mabea/static/js/2.0d70690d.chunk.js.LICENSE.txt",
+    "static/media/Image1.png": "/Mabea/static/media/Image1.c86c28b9.png",
+    "static/media/Image2.png": "/Mabea/static/media/Image2.5bc4f527.png",
+    "static/media/Image3.png": "/Mabea/static/media/Image3.2e030063.png",
+    "static/media/Image4.png": "/Mabea/static/media/Image4.6f36c854.png",
+    "static/media/Image5.png": "/Mabea/static/media/Image5.f11ea5a0.png",
+    "static/media/Image6.png": "/Mabea/static/media/Image6.ea9ee053.png",
+    "static/media/Image7.png": "/Mabea/static/media/Image7.6a65d30c.png",
+    "static/media/Image8.png": "/Mabea/static/media/Image8.197162a5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.148087ca.js",
+    "static/js/2.0d70690d.chunk.js",
+    "static/css/main.23640218.chunk.css",
+    "static/js/main.865d6e75.chunk.js"
+  ]
+}
