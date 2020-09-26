@@ -20,6 +20,7 @@
     border:1px solid black;
     width: 80%;
     height: 40px;
+    max-width: 600px;
 }
 
 .login-box a {
@@ -46,6 +47,7 @@
     font-family: 'Libre Baskerville', serif;
     font-size: 24px;
     width: 80%;
+    max-width: 600px;
 }
 
 .login-box form input {
