@@ -32,7 +32,7 @@ class displayBa extends React.Component {
       .catch((error) => {
         console.log(error);
       })
-      .then(()=>{
+      .then(() => {
         this.setState({loading: false});
       })
   };

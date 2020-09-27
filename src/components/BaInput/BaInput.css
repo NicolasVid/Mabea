@@ -9,7 +9,6 @@
     justify-content: center;
     font-family: 'Libre Baskerville', serif;
     font-size: 24px;
-    width: 100%;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -21,20 +20,22 @@
     background-color: #679b9b;
     color: white;
     border:1px solid black;
-    width: 80%;
+    width: 100%;
     text-align: center;
+    padding: 0.5rem 1rem;
+
 }
 
 
 .Input2 textarea {
     height: 200px;
-    border: 2px solid grey;
-    width: 80%;
     margin-top: 2rem;
-}
+    border: 1px solid #679b9b;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 100%;
+    padding: 1rem;
 
-.Input2 textarea ::placeholder {
-    margin: auto;
 }
 
 .Input2 button {
