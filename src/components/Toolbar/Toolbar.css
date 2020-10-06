@@ -1,15 +1,22 @@
 .toolbar {
     width: 100%;
-    position: fixed;
-    background-color: #679b9b;
+    background-color: #C1E1DC;
     height: 63px;
     top: 0px;
     left: 0px;
     z-index: 99999;
+    box-shadow: 0 0 10px 0 #D0D0D0;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 500;
+
 }
 
 .toolbar_logo {
     margin-left: 1rem;
+}
+
+.toolbar_logo img {
+    width: 50px;
 }
 
 .toolbar_logo a {
@@ -38,12 +45,19 @@
 
 .toolbar_navigation-items li {
     padding: 0 1em;
+    font-weight: 600;
 }
 
 .toolbar_navigation-items a {
     color: white;
     text-decoration: none;
+}
 
+.toolbar_navigation-items li:hover {
+    color: #626D71;
+    border-bottom: 1px solid #626D71;
+    padding-bottom: 0.3rem;
+    font-weight: 600;
 }
 
 .toolbar_navigation-items a:hover,

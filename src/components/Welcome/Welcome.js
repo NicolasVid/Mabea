@@ -26,7 +26,7 @@ class Welcome extends React.Component {
             
         }
     };
-
+    
     render(){
     return (
         <div className="Welcome">
@@ -35,7 +35,7 @@ class Welcome extends React.Component {
             <img src={Image2} alt="" data-speed="2" className="Layer2"/>
             <img src={Image3} alt="" data-speed="-3" className="Layer3"/>
             <img src={Image4} alt="" data-speed="3" className="Layer4"/>
-            <img src={Image5} alt="" data-speed="-5" className="Layer5"/>
+            <img src={Image5} alt="" data-speed="5" className="Layer5"/>
             <img src={Image6} alt="" data-speed="4" className="Layer6"/>
             <img src={Image7} alt="" data-speed="-7" className="Layer7"/>
             <img src={Image8} alt="" data-speed="-8" className="Layer8"/>

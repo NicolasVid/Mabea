@@ -3,6 +3,7 @@ import "./DisplayBa.css";
 import axios from "axios";
 import Greet from "../Greet/Greet";
 import Loader from '../Loader/Loader';
+import heart from '../img/heart.png';
 
 class displayBa extends React.Component {
 
@@ -13,6 +14,7 @@ class displayBa extends React.Component {
       posts: {},
       display: true,
       loading: true,
+      scale: false,
     };
   }
 
@@ -51,9 +53,15 @@ class displayBa extends React.Component {
       })
       .then((response) => {
         this.setState({display: false});
+        this.scaleMyHeart();
       }).catch((error) => {
         console.log(error);
       });
+  };
+
+  scaleMyHeart = () => {
+    this.setState({scale: true});
+    setTimeout(() => this.setState({scale: false}), 2000);
   };
 
   render() {
@@ -64,7 +72,7 @@ class displayBa extends React.Component {
     return (
       <>
         <div className="DisplayBa">
-          <p>{posts.ba}</p>
+          <p><span>{posts.ba}</span></p>
         </div>
         <div className="Anonyme">
           <p>{posts.username}</p>
@@ -83,6 +91,12 @@ class displayBa extends React.Component {
           clickHandler={this.clickHandler}
           /> : null}
             <button onClick={this.changeBa}>Nouvelle BA</button>
+        </div>
+        <div className={this.state.scale ? "image_container--scaled" : "image_container"}>
+          <img
+            src={heart}
+            alt='heart'
+          />
         </div>
       </>
     );

@@ -33,6 +33,10 @@
     z-index:1;
 }
 
+.Welcome a {
+    z-index:2;
+}
+
 .Welcome a:hover {
     text-decoration: none;
     color:white;
@@ -84,7 +88,7 @@ transition: all 0.4s ease 0s;
 }
 
 .Layer6 {
-    top: 28%;
+    top: 48%;
     left: 39%;
 }
 

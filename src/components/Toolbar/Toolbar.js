@@ -2,6 +2,7 @@ import React from "react";
 import DrawerToogleButton from "../SideDrawer/DrawerToogleButton";
 import "./Toolbar.css";
 import { Link } from "react-router-dom";
+import angel from '../img/angel.png';
 
 const toolbar = (props) => {
   let log = "Connexion";
@@ -18,7 +19,12 @@ const toolbar = (props) => {
           <DrawerToogleButton click={props.drawerClickHandler} />
         </div>
         <div className="toolbar_logo">
-          <Link to={process.env.PUBLIC_URL+'/'}>MABÉA</Link>
+          <Link to={process.env.PUBLIC_URL+'/'}>
+            <img 
+              src={angel}
+              alt='angel_logo'
+            />
+          </Link>
         </div>
         <div className="spacer"></div>
         <div className="toolbar_navigation-items">
