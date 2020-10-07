@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "83715069a37e7bcb90ebbb00fc88692b",
+    "revision": "de7aed74d2dc307fde20db72368a16cd",
     "url": "/Mabea/index.html"
   },
   {
-    "revision": "af7e9b1fec686c60aee7",
-    "url": "/Mabea/static/css/main.ee994e93.chunk.css"
+    "revision": "62d6e99b0800f58c6b60",
+    "url": "/Mabea/static/css/main.0385416a.chunk.css"
   },
   {
     "revision": "72c28c7385add4628168",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Mabea/static/js/2.87dd7bb6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "af7e9b1fec686c60aee7",
-    "url": "/Mabea/static/js/main.f86e3cb0.chunk.js"
+    "revision": "62d6e99b0800f58c6b60",
+    "url": "/Mabea/static/js/main.654f015c.chunk.js"
   },
   {
     "revision": "96f5c55ac624c1cdbd25",
