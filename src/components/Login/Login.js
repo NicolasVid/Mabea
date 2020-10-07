@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
+import Loader from '../Loader/Loader';
 
 class Login extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Login extends React.Component {
       email: "",
       password: "",
       message: "",
+      loading: false,
     };
   }
 
@@ -28,6 +30,7 @@ class Login extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    this.setState({loading: true});
     axios
       .post("https://damp-thicket-56527.herokuapp.com/api/auth/login", this.state)
       .then((response) => {
@@ -43,14 +46,19 @@ class Login extends React.Component {
         this.setState({message: "Email ou mot de passe incorrect"})
         console.log(error);
         
+      })
+      .then(() => {
+        this.setState({loading: false});
       });
   };
 
   render() {
-    if (!this.props.isLoged) {
+    if (this.state.loading)
+      return <Loader />
+    else if (!this.props.isLoged) {
       return (
         <div className="login-box">
-          <h1>Connexion</h1>
+          <h1>CONNEXION</h1>
             <form className="login-form" onSubmit={this.handleSubmit}>
               <input
                 type="email"
@@ -75,7 +83,8 @@ class Login extends React.Component {
     } else {
       return (
         <div className="Loged">
-          <h1>Bienvenue, <br/><br/> {this.props.username}</h1>
+          <h1>Bienvenue,</h1>
+          <h1><span>{this.props.username}</span></h1>
           <Link to="/Read">
             <button>Lire des BA</button>
           </Link>

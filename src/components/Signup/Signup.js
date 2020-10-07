@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import "./Signup.css";
 import { Link } from "react-router-dom";
+import Loader from '../Loader/Loader';
 
 class Login extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Login extends Component {
       email: "",
       password: "",
       message: "",
+      loading: false,
     };
   }
 
@@ -28,6 +30,7 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    this.setState({loading: true});
     axios
       .post("https://damp-thicket-56527.herokuapp.com/api/auth/signup", this.state)
       .then((response) => {
@@ -37,13 +40,18 @@ class Login extends Component {
       .catch((error) => {
         console.log(error);
         this.setState({message: "Email déjà utilisé"})
-      });
+      })
+      .then(() => {
+        this.setState({loading: false});
+      })
   };
   render() {
-    if (this.state.status === 201) {
+    if (this.state.loading)
+      return <Loader />
+    else if (this.state.status === 201) {
       return (
         <div className="Signed">
-          <h1>Compte crée avec succés</h1>
+          <h1><span>Compte crée avec succés</span></h1>
           <Link to="/LogIn">
             <button>Se connecter</button>
           </Link>
@@ -52,7 +60,7 @@ class Login extends Component {
     } else {
       return (
         <div className="login-box">
-          <h1>Créer un compte</h1>
+          <h1>CRÉER UN COMPTE</h1>
             <form className="login-form" onSubmit={this.handleSubmit}>
               <input
                 type="email"
