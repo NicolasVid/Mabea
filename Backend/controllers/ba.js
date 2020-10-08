@@ -1,8 +1,13 @@
 const ba = require("../models/ba");
 
+let lastNumber = null;
 exports.getRandomBa = (req, res, next) => {
   ba.count().exec(function (err, count) {
     var random = Math.floor(Math.random() * count++);
+    while (random === lastNumber) {
+      random = Math.floor(Math.random() * count++);
+    }
+    lastNumber = random;
     ba.findOne()
       .skip(random)
       .then((things) => {
