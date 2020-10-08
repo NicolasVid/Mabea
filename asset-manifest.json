@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Mabea/static/css/main.0385416a.chunk.css",
-    "main.js": "/Mabea/static/js/main.654f015c.chunk.js",
-    "main.js.map": "/Mabea/static/js/main.654f015c.chunk.js.map",
+    "main.css": "/Mabea/static/css/main.02c60830.chunk.css",
+    "main.js": "/Mabea/static/js/main.88e4417d.chunk.js",
+    "main.js.map": "/Mabea/static/js/main.88e4417d.chunk.js.map",
     "runtime-main.js": "/Mabea/static/js/runtime-main.148087ca.js",
     "runtime-main.js.map": "/Mabea/static/js/runtime-main.148087ca.js.map",
     "static/js/2.87dd7bb6.chunk.js": "/Mabea/static/js/2.87dd7bb6.chunk.js",
     "static/js/2.87dd7bb6.chunk.js.map": "/Mabea/static/js/2.87dd7bb6.chunk.js.map",
     "index.html": "/Mabea/index.html",
-    "precache-manifest.2f13ffc9ba7150992fe3aac5a2cc474f.js": "/Mabea/precache-manifest.2f13ffc9ba7150992fe3aac5a2cc474f.js",
+    "precache-manifest.b1636579a9ddaa535e023c8817a53af5.js": "/Mabea/precache-manifest.b1636579a9ddaa535e023c8817a53af5.js",
     "service-worker.js": "/Mabea/service-worker.js",
-    "static/css/main.0385416a.chunk.css.map": "/Mabea/static/css/main.0385416a.chunk.css.map",
+    "static/css/main.02c60830.chunk.css.map": "/Mabea/static/css/main.02c60830.chunk.css.map",
     "static/js/2.87dd7bb6.chunk.js.LICENSE.txt": "/Mabea/static/js/2.87dd7bb6.chunk.js.LICENSE.txt",
     "static/media/Image1.png": "/Mabea/static/media/Image1.c86c28b9.png",
     "static/media/Image2.png": "/Mabea/static/media/Image2.5bc4f527.png",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.148087ca.js",
     "static/js/2.87dd7bb6.chunk.js",
-    "static/css/main.0385416a.chunk.css",
-    "static/js/main.654f015c.chunk.js"
+    "static/css/main.02c60830.chunk.css",
+    "static/js/main.88e4417d.chunk.js"
   ]
 }
