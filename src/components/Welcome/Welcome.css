@@ -9,14 +9,18 @@
 }   
 
 .Welcome p {
-    font-family: 'Libre Baskerville', serif;
     font-weight: 900;
     color: black; 
-    margin: 200px auto 40px auto;
+    margin: 200px auto 5rem auto;
     font-size: 4em;
     z-index: 2;
     text-align: center;
 }
+
+.Welcome p span{
+    background-color: #FFCCAC;
+}
+
 @media (max-width: 769px) {
     .Welcome img {
         display:none;
@@ -48,7 +52,7 @@
     text-decoration: none;
     background: #ffffff;
     padding: 20px;
-    border: 4px solid #494949;
+    border: 4px solid #FFCCAC;
     transition: all 0.4s ease 0s;
     font-family: 'Libre Baskerville', serif;
     font-size: 20px;
@@ -88,7 +92,7 @@ transition: all 0.4s ease 0s;
 }
 
 .Layer6 {
-    top: 48%;
+    top: 68%;
     left: 39%;
 }
 
@@ -98,7 +102,7 @@ transition: all 0.4s ease 0s;
 }
 
 .Layer8 {
-    top: 30%;
-    left: 69%;
+    top: 10%;
+    left: 39%;
 }
 

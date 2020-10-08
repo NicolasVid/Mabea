@@ -23,6 +23,7 @@ class displayBa extends React.Component {
   }
 
   changeBa = () => {
+    this.setState({loading: true});
     axios
       .get("https://damp-thicket-56527.herokuapp.com/api/ba/")
       .then((response) => {

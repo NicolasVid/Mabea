@@ -30,7 +30,7 @@ class Welcome extends React.Component {
     render(){
     return (
         <div className="Welcome">
-            <p>Bienvenue sur Mabéa</p>
+            <p><span>Bienvenue sur Mabéa</span></p>
             <img src={Image1} alt="" data-speed="-5" className="Layer1"/>
             <img src={Image2} alt="" data-speed="2" className="Layer2"/>
             <img src={Image3} alt="" data-speed="-3" className="Layer3"/>
