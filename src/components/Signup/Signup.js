@@ -32,7 +32,7 @@ class Login extends Component {
     event.preventDefault();
     this.setState({loading: true});
     axios
-      .post("https://damp-thicket-56527.herokuapp.com/api/auth/signup", this.state)
+      .post(`${process.env.REACT_APP_BASE_URL}/api/auth/signup`, this.state)
       .then((response) => {
         this.setState({ status: response.status });
         console.log(response);
