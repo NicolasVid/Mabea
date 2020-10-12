@@ -25,7 +25,7 @@ class displayBa extends React.Component {
   changeBa = () => {
     this.setState({loading: true});
     axios
-      .get("https://damp-thicket-56527.herokuapp.com/api/ba/")
+      .get(`${process.env.REACT_APP_BASE_URL}/api/ba/`)
       .then((response) => {
           this.setState({ posts: response.data });
           sessionStorage.setItem("_id", response.data._id);
@@ -46,9 +46,8 @@ class displayBa extends React.Component {
         Authorization: "Bearer " + sessionStorage.getItem('token'),
       }
     });
-
     Authaxios
-      .patch("https://damp-thicket-56527.herokuapp.com/api/ba/", {
+      .patch(`${process.env.REACT_APP_BASE_URL}/api/ba/`, {
         _id: sessionStorage.getItem("_id"),
         greeted: sessionStorage.getItem("greeted"),
       })

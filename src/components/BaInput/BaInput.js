@@ -35,7 +35,7 @@ class baInput extends React.Component {
       }
     });
     Authaxios
-      .post("https://damp-thicket-56527.herokuapp.com/api/moderation", this.state)
+      .post(`${process.env.REACT_APP_BASE_URL}/api/moderation`, this.state)
       .then((response) => {
         this.setState({ status: response.status });
       })
