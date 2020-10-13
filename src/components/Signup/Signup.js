@@ -11,6 +11,7 @@ class Login extends Component {
     this.state = {
       email: "",
       password: "",
+      confirmPassword: "",
       message: "",
       loading: false,
     };
@@ -28,22 +29,31 @@ class Login extends Component {
     });
   };
 
+  handleConfirmPasswordChange = (event) => {
+    this.setState({
+      confirmPassword: event.target.value,
+    });
+  };
+
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({loading: true});
-    axios
-      .post(`${process.env.REACT_APP_BASE_URL}/api/auth/signup`, this.state)
-      .then((response) => {
-        this.setState({ status: response.status });
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-        this.setState({message: "Email déjà utilisé"})
-      })
-      .then(() => {
-        this.setState({loading: false});
-      })
+    if (this.state.password === this.state.confirmPassword) {
+      this.setState({loading: true});
+      axios
+        .post(`${process.env.REACT_APP_BASE_URL}/api/auth/signup`, this.state)
+        .then((response) => {
+          this.setState({ status: response.status });
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error.message);
+          this.setState({message: "Email déjà utilisé"})
+        })
+        .then(() => {
+          this.setState({loading: false});
+        })
+    }
+    else this.setState({message: "Les mots de passe doivent être identiques"})
   };
   render() {
     if (this.state.loading)
@@ -69,8 +79,13 @@ class Login extends Component {
               />
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="Mot de passe"
                 onChange={this.handlePasswordChange}
+              />
+              <input
+                type="password"
+                placeholder="Confirmer le mot de passe"
+                onChange={this.handleConfirmPasswordChange}
               />
               <div className="error-message">{this.state.message}</div>
               <button className="btn" type="submit">
