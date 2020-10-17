@@ -11,6 +11,7 @@ class baInput extends React.Component {
       username: this.props.username,
       ba: "",
       status: "",
+      chars_left: 300,
     };
   }
 
@@ -25,6 +26,9 @@ class baInput extends React.Component {
     this.setState({
       ba: event.target.value,
     });
+    const charCount = event.target.value.length;
+    const charLeft = 300 - charCount;
+    this.setState({chars_left: charLeft})
   };
 
   handleSumbit = (event) => {
@@ -65,12 +69,16 @@ class baInput extends React.Component {
         <div className="Input2">
           <form onSubmit={this.handleSumbit}>
             <h1>PARTAGER VOTRE BA !</h1>
+            <div className="Input2__textarea">
             <textarea
               type="text"
               placeholder="Ta bonne action..."
               value={ba}
+              maxlength="300"
               onChange={this.handleBaChange}
             />
+            <div className="Input2__textarea--charscount">{this.state.chars_left} / 300</div>
+            </div>
             <button type="submit">Soumettre</button>
           </form>
         </div>

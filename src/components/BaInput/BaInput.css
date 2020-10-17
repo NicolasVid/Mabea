@@ -1,5 +1,8 @@
 .Input2 {
     margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Input2 form {
@@ -9,7 +12,6 @@
     justify-content: center;
     font-size: 24px;
     max-width: 600px;
-    margin: 0 auto;
 }
 
 .Input2 form h1 {
@@ -17,25 +19,35 @@
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    width: 100%;
     background-color: #FFCCAC;
     color: white;
     border-bottom:1px solid black;
-    width: 80%;
     height: 40px;
     max-width: 600px;
     letter-spacing: 0.1rem;
+    min-width: 500px;
 }
 
+.Input2__textarea {
+    position: relative;
+}
 
-.Input2 textarea {
-    height: 150px;
+.Input2__textarea textarea {
+    height: 180px;
     border: none;
     border: 2px solid #C1E1DC;
-    padding-left: 1rem;
-    width: 70%;
+    padding: 1rem;
     margin: 2rem 0 0 0;
     font-size: 17px;
+    min-width: 450px;
+}
+
+.Input2__textarea--charscount {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 1rem;
+    font-size: 16px;
+    color: #D1D1D1;
 }
 
 .login-box form input:-webkit-autofill {
@@ -52,7 +64,6 @@
     border: 4px solid #FFCCAC;
     display: flex;
     transition: all 0.4s ease 0s;
-    font-family: 'Libre Baskerville', serif;
     font-size: 20px;
     font-weight: 700;
     margin: 2rem;
@@ -79,7 +90,6 @@ transition: all 0.4s ease 0s;
 }
 
 .Share h1 {
-    font-family: 'Libre Baskerville', serif;
     font-weight: 700;
     color: black; 
     margin: 0 5px 24px;
@@ -109,7 +119,6 @@ transition: all 0.4s ease 0s;
     border: 4px solid #494949;
     display: inline-block;
     transition: all 0.4s ease 0s;
-    font-family: 'Libre Baskerville', serif;
     font-size: 20px;
     font-weight: 700;
     margin: 2rem;
