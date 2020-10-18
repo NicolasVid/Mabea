@@ -40,6 +40,7 @@
     margin: 2rem 0 0 0;
     font-size: 17px;
     min-width: 450px;
+    resize: none;
 }
 
 .Input2__textarea--charscount {

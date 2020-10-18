@@ -4,6 +4,8 @@ const bcrypt = require("bcrypt");
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 
+const { sendValidationMail } = require("../nodemailer");
+
 exports.signup = (req, res, next) => {
   User.count().exec(function (err, count) {
     bcrypt.hash(req.body.password, 10).then((hash) => {
@@ -12,10 +14,12 @@ exports.signup = (req, res, next) => {
         email: req.body.email,
         password: hash,
         admin: false,
+        accountConfirmed: false,
       });
       user
         .save()
         .then(() => {
+          sendValidationMail(req.body.email);
           res.status(201).json({
             message: "User added successfully!",
           });
