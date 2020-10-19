@@ -31,14 +31,14 @@ class Welcome extends React.Component {
     return (
         <div className="Welcome">
             <p><span>Bienvenue sur Mabéa</span></p>
-            <img src={Image1} alt="" data-speed="-5" className="Layer1"/>
-            <img src={Image2} alt="" data-speed="2" className="Layer2"/>
-            <img src={Image3} alt="" data-speed="-3" className="Layer3"/>
-            <img src={Image4} alt="" data-speed="3" className="Layer4"/>
-            <img src={Image5} alt="" data-speed="5" className="Layer5"/>
-            <img src={Image6} alt="" data-speed="4" className="Layer6"/>
-            <img src={Image7} alt="" data-speed="-7" className="Layer7"/>
-            <img src={Image8} alt="" data-speed="-8" className="Layer8"/>
+            <img src={Image1} alt="" data-speed="-5" className="Layer1" copyright="https://thenounproject.com"/>
+            <img src={Image2} alt="" data-speed="2" className="Layer2" copyright="https://thenounproject.com"/>
+            <img src={Image3} alt="" data-speed="-3" className="Layer3" copyright="https://thenounproject.com"/>
+            <img src={Image4} alt="" data-speed="3" className="Layer4" copyright="https://thenounproject.com"/>
+            <img src={Image5} alt="" data-speed="5" className="Layer5" copyright="https://thenounproject.com"/>
+            <img src={Image6} alt="" data-speed="4" className="Layer6" copyright="https://thenounproject.com"/>
+            <img src={Image7} alt="" data-speed="-7" className="Layer7" copyright="https://thenounproject.com"/>
+            <img src={Image8} alt="" data-speed="-8" className="Layer8" copyright="https://thenounproject.com"/>
             <Link to="/Read"><button >Commencer a lire des BA</button></Link>
         </div>
     )
