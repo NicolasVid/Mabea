@@ -74,7 +74,7 @@ class baInput extends React.Component {
               type="text"
               placeholder="Ta bonne action..."
               value={ba}
-              maxlength="300"
+              maxLength="300"
               onChange={this.handleBaChange}
             />
             <div className="Input2__textarea--charscount">{this.state.chars_left} / 300</div>

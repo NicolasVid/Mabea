@@ -8,7 +8,7 @@ import Welcome from "./components/Welcome/Welcome";
 import SignUp from "./components/Signup/Signup";
 import LogIn from "./components/Login/Login";
 import Moderation from "./components/Moderation/Moderation";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 class App extends React.Component {
   constructor(props) {
@@ -68,7 +68,6 @@ class App extends React.Component {
       backdrop = <Backdrop backdropClickHandler={this.backdropClickHandler} />;
     }
     return (
-      <Router>
         <div style={{ height: "100%" }}>
           <Toolbar
             drawerClickHandler={this.drawnerToogleClickHandler}
@@ -126,7 +125,6 @@ class App extends React.Component {
             />
           </main>
         </div>
-      </Router>
     );
   }
 }
